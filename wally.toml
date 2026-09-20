@@ -1,6 +1,6 @@
 [package]
 name = "grunionnn/ratelimiter"
-version = "1.0.0"
+version = "1.0.1"
 license = "MIT"
 authors = ["Grunionnn"]
 registry = "https://github.com/UpliftGames/wally-index"

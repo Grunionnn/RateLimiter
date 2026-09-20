@@ -1,5 +1,5 @@
 --!strict
-const Players = game:GetService("Players")
+local Players = game:GetService("Players")
 
 local RateLimiter = {}
 RateLimiter.__index = RateLimiter
@@ -24,7 +24,7 @@ export type RateLimiter = typeof(setmetatable({} :: RateLimiterData, RateLimiter
 function RateLimiter.new(maxRequests: number, limitType: "Token" | "HardCap", tokenRefillRate: number?): RateLimiter
 	assert(maxRequests > 0, "maxRequests must be greater than 0")
 	assert(tokenRefillRate == nil or tokenRefillRate > 0, "tokenRefillRate must be greater than 0 if provided")
-	
+
 	local self = setmetatable({} :: RateLimiterData, RateLimiter) :: RateLimiter
 
 	self._Players = {}
